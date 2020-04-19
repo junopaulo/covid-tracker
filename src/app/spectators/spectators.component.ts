@@ -10,8 +10,8 @@ export class SpectatorsComponent implements OnInit, OnDestroy {
 
   liveTotal: number = 0;
 
-
-  constructor(private spectatorsService: SpectatorsService) { }
+  constructor(private spectatorsService: SpectatorsService) {
+  };
 
   ngOnInit(): void {
     this.spectatorsService.monitorViewing().subscribe((total) => {
@@ -22,12 +22,9 @@ export class SpectatorsComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.spectatorsService.disconnect();
+    
   }
 
-  @HostListener('window:unload', ['$event'])
-  handleKeyDown(event: KeyboardEvent) {
-    this.spectatorsService.disconnect();
-  }
+  
 
 }
