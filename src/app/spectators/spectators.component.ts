@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, HostListener } from '@angular/core';
 import { SpectatorsService } from '../spectators.service';
 
 @Component({
@@ -6,9 +6,11 @@ import { SpectatorsService } from '../spectators.service';
   templateUrl: './spectators.component.html',
   styleUrls: ['./spectators.component.scss']
 })
-export class SpectatorsComponent implements OnInit {
+export class SpectatorsComponent implements OnInit, OnDestroy {
 
   liveTotal: number = 0;
+
+
   constructor(private spectatorsService: SpectatorsService) { }
 
   ngOnInit(): void {
@@ -17,6 +19,15 @@ export class SpectatorsComponent implements OnInit {
       this.liveTotal = total;
     });
     this.spectatorsService.startViewing();
+  }
+
+  ngOnDestroy(): void {
+    this.spectatorsService.disconnect();
+  }
+
+  @HostListener('window:unload', ['$event'])
+  handleKeyDown(event: KeyboardEvent) {
+    this.spectatorsService.disconnect();
   }
 
 }

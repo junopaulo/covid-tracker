@@ -17,4 +17,9 @@ export class SocketService {
     this.socket = io.connect(environment.SOCKET_ENDPOINT);
   }
 
+  disconnect() {
+    this.socket.disconnect();
+  
+  }
+
 }

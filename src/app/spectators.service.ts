@@ -16,6 +16,10 @@ export class SpectatorsService {
     this.socketService.socket.emit('viewing');
   }
 
+  public disconnect = () => {
+    this.socketService.disconnect();
+  }
+
 
   public monitorViewing = () : Observable<any> => {
     return Observable.create((observer) => {
