@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
 
+import { SocketService } from './socket.service';
+import { VirtualTimeScheduler } from 'rxjs';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -7,4 +10,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'covid-tracker';
+
+  constructor(private socketService: SocketService) {}
+
+  ngOnInit() {
+    this.socketService.initSocket();
+  }
 }

@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "covid-tracker"
+    }
+  },
+  "defaultProject": "covid-tracker",
+  "cli": {
+    "defaultCollection": "@datorama/akita"
+  }
 }
