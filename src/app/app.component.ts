@@ -11,9 +11,8 @@ import { VirtualTimeScheduler } from 'rxjs';
 export class AppComponent {
   title = 'Covid Tracker Philippines';
 
-  constructor(private socketService: SocketService) {}
+  constructor() {}
 
   ngOnInit() {
-    
   }
 }

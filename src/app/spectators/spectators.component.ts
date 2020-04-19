@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SpectatorsService } from '../spectators.service';
 
 @Component({
   selector: 'app-spectators',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SpectatorsComponent implements OnInit {
 
-  constructor() { }
+  liveTotal: number = 0;
+  constructor(private spectatorsService: SpectatorsService) { }
 
   ngOnInit(): void {
+    this.spectatorsService.monitorViewing().subscribe((total) => {
+      console.log(total);
+      this.liveTotal = total;
+    });
+    this.spectatorsService.startViewing();
   }
 
 }
