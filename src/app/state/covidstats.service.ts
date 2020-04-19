@@ -18,6 +18,10 @@ export class CovidstatsService {
               private http: HttpClient) {
   }
 
+  getStatInitialValue() : Covidstat {
+    return this.covidstatsStore.statInitialValue;
+  }
+
   get() {
     return this.http.get<Covidstat[]>(`${this.apiUrl}/${this.last7Days.toISOString()}`).pipe(tap(entities => {
       this.covidstatsStore.set(entities);

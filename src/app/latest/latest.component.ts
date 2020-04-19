@@ -12,7 +12,10 @@ import { Covidstat } from '../state/covidstat.model';
 })
 export class LatestComponent implements OnInit {
 
+  title: string = 'Latest Stats';
+  latest: Covidstat;
   items$: Observable<Covidstat[]>;
+  latest$: Observable<Covidstat>;
 
   constructor(
     private covidstatsService: CovidstatsService,
@@ -20,8 +23,13 @@ export class LatestComponent implements OnInit {
 
   ngOnInit(): void {
     this.covidstatsService.get().toPromise();
-    this.items$ = this.covidstatsQuery.selectAll();
-    
+    this.latest = this.covidstatsService.getStatInitialValue();
+    console.log(this.latest);
+    this.latest$ = this.covidstatsQuery.selectLast();
+    this.latest$.subscribe(item => {
+      console.log(item);
+      this.latest = item;
+    });
   }
 
   track(_, item) {

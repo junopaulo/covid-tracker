@@ -1,13 +1,13 @@
 export interface Covidstat {
-  country: string,
-  countryCode: string,
-  lat: number,
-  lon: number,
-  confirmed: number,
-  deaths: number,
-  recovered: number,
-  active: number,
-  date: number
+  Country: string,
+  CountryCode: string,
+  Lat: number,
+  Lon: number,
+  Confirmed: number,
+  Deaths: number,
+  Recovered: number,
+  Active: number,
+  Date: number
 }
 
 export function createCovidstat(params: Partial<Covidstat>) {

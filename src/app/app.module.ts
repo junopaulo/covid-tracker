@@ -9,11 +9,13 @@ import { AkitaNgRouterStoreModule } from '@datorama/akita-ng-router-store';
 import { environment } from '../environments/environment';
 import { LatestComponent } from './latest/latest.component';
 import { HttpClientModule } from '@angular/common/http';
+import { SpectatorsComponent } from './spectators/spectators.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LatestComponent
+    LatestComponent,
+    SpectatorsComponent
   ],
   imports: [
     BrowserModule,
