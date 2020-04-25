@@ -10,12 +10,14 @@ import { environment } from '../environments/environment';
 import { LatestComponent } from './latest/latest.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpectatorsComponent } from './spectators/spectators.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LatestComponent,
-    SpectatorsComponent
+    SpectatorsComponent,
+    MainHeaderComponent
   ],
   imports: [
     BrowserModule,

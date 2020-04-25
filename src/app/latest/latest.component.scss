@@ -1,0 +1,26 @@
+.latest {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 24px;
+}
+
+.latest-item {
+    
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-items: center;
+    min-width: 96px;
+    padding: 0.8em 0;
+
+    h3 {
+        font-size: 10px;
+        text-transform: uppercase;
+        opacity: 0.4;
+    }
+
+    .latest-value {
+        font-size: 14px;
+        font-weight: 700;
+    }
+}

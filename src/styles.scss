@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Source+Sans+Pro:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap');
+
+$purple: #400082;
+$green: #00BDAA;
+$pink: #FE346E;
+
+$spacing: 8px;
+$main-font: 'Source Sans Pro';
+$body-font: 'Roboto';
+
+html {
+    font-family: $body-font;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: $main-font;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #EEF2F5;
+
+}
+
+.card {
+    background-color: #FEFEFF;
+    border-radius: 6px;
+}
+
+.text-cases {
+    color: $purple;
+}
+
+.text-deaths {
+    color: $pink;
+}
+
+
+.text-recoveries {
+    color: $green;
+}

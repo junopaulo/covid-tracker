@@ -1,0 +1,17 @@
+
+.container {
+	display: flex;
+	min-width: 64px;
+	justify-content: space-around;
+	background: #FEFEFF;
+	height: 24px;
+	align-items: center;
+
+	span {
+		font-size: 0.8em;
+	}
+}
+
+.gg-eye {
+	--ggs: 0.8;
+}

@@ -9,7 +9,6 @@ import { VirtualTimeScheduler } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Covid Tracker Philippines';
 
   constructor() {}
 
