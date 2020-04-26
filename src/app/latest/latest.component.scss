@@ -26,8 +26,11 @@
     }
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (max-width: 600px) {
     .latest-item {
+
+        flex: 1 auto;
+
         h3 {
             font-size: 12px;
         }

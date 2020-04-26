@@ -44,6 +44,11 @@ export class HistogramComponent implements OnInit {
 
   initOptions(dates, cases, deaths, recoveries) {
     this.options = {
+      grid: {
+        right: '8px',
+        containLabel: true,
+        left: '8px'
+      },
       legend: {
         data: ['Cases', 'Deaths', 'Recoveries'],
         align: 'left'
