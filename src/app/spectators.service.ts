@@ -9,7 +9,7 @@ export class SpectatorsService {
 
 
   constructor(private socketService: SocketService) {
-    //this.socketService.initSocket();
+    this.socketService.initSocket();
   }
 
   public startViewing = () => {
