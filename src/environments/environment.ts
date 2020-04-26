@@ -5,7 +5,6 @@
 export const environment = {
   production: false,
   SOCKET_ENDPOINT: 'http://localhost:8080',
-  ABLY_API_KEY: '_Dkggw.d43bPA:0YQqEOdw0ULdxRe2',
 };
 
 /*

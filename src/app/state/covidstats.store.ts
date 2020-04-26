@@ -14,7 +14,7 @@ export function defaultValue(): Covidstat {
     Deaths: 0,
     Recovered: 0,
     Active: 0,
-    Date: 0,
+    Date: '0',
   };
 }
 

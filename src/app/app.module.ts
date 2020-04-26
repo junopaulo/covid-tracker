@@ -11,7 +11,6 @@ import { LatestComponent } from './latest/latest.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SpectatorsComponent } from './spectators/spectators.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
-import { NewsComponent } from './news/news.component';
 import { HistogramComponent } from './histogram/histogram.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxEchartsModule } from 'ngx-echarts';
@@ -24,7 +23,6 @@ import { NgxEchartsModule } from 'ngx-echarts';
     LatestComponent,
     SpectatorsComponent,
     MainHeaderComponent,
-    NewsComponent,
     HistogramComponent
   ],
   imports: [
