@@ -60,7 +60,7 @@ export class HistogramComponent implements OnInit {
       },
       series: [{
         name: 'Cases',
-        type: 'bar',
+        type: 'line',
         data: cases,
         animationDelay: function (idx) {
           return idx * 10;
