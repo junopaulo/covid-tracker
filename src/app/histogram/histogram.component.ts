@@ -47,7 +47,8 @@ export class HistogramComponent implements OnInit {
       grid: {
         right: '8px',
         containLabel: true,
-        left: '8px'
+        left: '8px',
+        bottom: '24px'
       },
       legend: {
         data: ['Cases', 'Deaths', 'Recoveries'],
@@ -66,6 +67,7 @@ export class HistogramComponent implements OnInit {
       series: [{
         name: 'Cases',
         type: 'line',
+        symbolSize: 8,
         data: cases,
         animationDelay: function (idx) {
           return idx * 10;
