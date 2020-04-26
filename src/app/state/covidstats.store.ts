@@ -19,7 +19,7 @@ export function defaultValue(): Covidstat {
 }
 
 @Injectable({ providedIn: 'root' })
-@StoreConfig({ name: 'covidstats' })
+@StoreConfig({ name: 'covidstats', idKey: 'Date' })
 export class CovidstatsStore extends EntityStore<CovidstatsState> {
 
   statInitialValue : Covidstat;

@@ -7,7 +7,7 @@ export interface Covidstat {
   Deaths: number,
   Recovered: number,
   Active: number,
-  Date: number
+  Date: string
 }
 
 export function createCovidstat(params: Partial<Covidstat>) {

@@ -1,7 +1,7 @@
 .latest {
     display: flex;
-    justify-content: space-between;
-    padding: 0 24px;
+    justify-content: space-around;
+
 }
 
 .latest-item {
@@ -22,5 +22,16 @@
     .latest-value {
         font-size: 14px;
         font-weight: 700;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .latest-item {
+        h3 {
+            font-size: 12px;
+        }
+        .latest-value {
+            font-size: 18px;
+        }
     }
 }

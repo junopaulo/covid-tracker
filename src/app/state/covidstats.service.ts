@@ -11,7 +11,9 @@ export class CovidstatsService {
   today: Date = new Date();
   days: number = 7; // Days you want to subtract
   last7Days: Date = new Date(this.today.getTime() - (this.days * 24 * 60 * 60 * 1000));
-  apiUrl = 'https://api.covid19api.com/live/country/philippines/status/confirmed/date';
+  covidEndpoint = 'https://api.covid19api.com';
+  apiUrl = `${this.covidEndpoint}/live/country/philippines/status/confirmed/date`;
+  liveUrl = `${this.covidEndpoint}/country/philippines`
  
 
   constructor(private covidstatsStore: CovidstatsStore,
@@ -25,6 +27,15 @@ export class CovidstatsService {
   get() {
     return this.http.get<Covidstat[]>(`${this.apiUrl}/${this.last7Days.toISOString()}`).pipe(tap(entities => {
       this.covidstatsStore.set(entities);
+    }));
+  }
+
+  getLiveByMonth(month: number) {
+    const start = new Date(2020, month, 1);
+    const end = new Date(2020, month, 0);
+    return this.http.get<Covidstat[]>(`${this.liveUrl}?from=${start.toISOString()}&to=${end.toISOString()}`)
+      .pipe(tap(entities => {
+        this.covidstatsStore.set(entities);
     }));
   }
 
