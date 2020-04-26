@@ -1,7 +1,7 @@
 <section class="site-section latest-container">
     <div *ngIf="latest" class="latest">
         <div class="latest-item card text-cases">
-            <h3>Infections</h3>
+            <h3>Infected</h3>
             <span class="latest-value">{{latest.Confirmed}}</span>
         </div>
         <div class="latest-item card text-deaths">
@@ -9,11 +9,11 @@
             <span class="latest-value">{{latest.Deaths}}</span>
         </div>
         <div class="latest-item card text-recoveries">
-            <h3>Recoveries</h3>
+            <h3>Recovered</h3>
             <span class="latest-value ">{{latest.Recovered}}</span>
         </div>
         <div class="latest-item card">
-            <h3>Updated</h3>
+            <h3>Last Update</h3>
             <span class="latest-value">{{latest.Date | date:'MM/dd hh:mm' }}</span>
         </div>
     </div>

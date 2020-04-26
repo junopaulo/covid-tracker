@@ -98,7 +98,7 @@ export class HistogramComponent implements OnInit {
    
     data.forEach((item, index) => {
       const date = new Date(item.Date);
-      this.dates.push(`${date.getMonth()}/${date.getDate()}`);
+      this.dates.push(`${date.getMonth() + 1}/${date.getDate()}`);
       this.cases.push(item.Confirmed);
       this.deaths.push(item.Deaths);
       this.recoveries.push(item.Recovered);
