@@ -95,14 +95,17 @@ export class HistogramComponent implements OnInit {
   }
   
   composeData(data: Array<Covidstat>) {
-   
-    data.forEach((item, index) => {
+
+    let item, prev; 
+    for(let i = 0; i < data.length - 1; i++) {
+      prev = data[i];
+      item = data[i + 1];
       const date = new Date(item.Date);
       this.dates.push(`${date.getMonth() + 1}/${date.getDate()}`);
-      this.cases.push(item.Confirmed);
-      this.deaths.push(item.Deaths);
-      this.recoveries.push(item.Recovered);
-    });
+      this.cases.push(item.Confirmed - prev.Confirmed);
+      this.deaths.push(item.Deaths - prev.Deaths);
+      this.recoveries.push(item.Recovered - prev.Recovered);
+    }
   }
 
 }
